@@ -41,6 +41,6 @@ class CartaView : View{
         val lado = mWidth / 2f
         mPaint.color = Color.BLACK
         mPaint.style = Paint.Style.STROKE
-        canvas!!.drawRect(lado / 2f,mHeight / 2f + mSize / 2f,mWidth - mWidth / 4f,mHeight/4f, mPaint)
+        canvas!!.drawRect(0f,mHeight,mWidth,0f, mPaint)
     }
 }
