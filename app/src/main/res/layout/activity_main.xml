@@ -7,25 +7,38 @@
     android:layout_height="match_parent"
     tools:context=".views.MainActivity">
 
-    <ScrollView
-        android:id="@+id/svP01"
-        android:layout_width="10dp"
-        android:layout_height="60dp"
-        android:background="@color/purple_200"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:rotation="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:src="@drawable/square_white_svg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ScrollView
+            android:id="@+id/svP01"
+            android:layout_width="10dp"
+            android:layout_height="60dp"
+            android:background="@color/purple_200"
+            android:orientation="horizontal"
+            android:rotation="0"
+            android:layout_weight="6"
+            >
+            <ListView
+                android:id="@+id/lvP01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </ScrollView>
+        <ImageView
+            android:src="@drawable/square_white_svg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
-        <ListView
-            android:id="@+id/lvP01"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </ScrollView>
+
 
     <pm.pe.edu.ulima.ocholocos.customViews.CartaView
         android:layout_width="35dp"

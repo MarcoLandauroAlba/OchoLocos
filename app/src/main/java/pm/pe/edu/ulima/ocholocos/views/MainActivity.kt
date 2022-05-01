@@ -15,7 +15,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val displayMetrics: DisplayMetrics = this.resources.displayMetrics
+//        val displayMetrics: DisplayMetrics = this.resources.displayMetrics\
+
+
+
+
 
         val dpHeight = displayMetrics.heightPixels / displayMetrics.density
         val dpWidth = displayMetrics.widthPixels / displayMetrics.density
