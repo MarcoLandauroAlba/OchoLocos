@@ -49,50 +49,25 @@
         android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintTop_toBottomOf="@id/ll01"
-        app:layout_constraintBottom_toTopOf="@id/ll02"
-        >
-        <ImageView
-            android:src="@drawable/square_white_svg"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-        <ScrollView
-            android:id="@+id/svP03"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="@color/purple_200"
-            android:orientation="vertical"
-            android:layout_weight="6"
-            >
-            <ListView
-                android:id="@+id/lvP03"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </ScrollView>
-        <ImageView
-            android:src="@drawable/square_white_svg"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <pm.pe.edu.ulima.ocholocos.customViews.CartaView
-        android:layout_width="134dp"
-        android:layout_height="255dp"
-        android:layout_margin="10dp"
-        app:PaloCarta="1"
-        app:layout_constraintBottom_toTopOf="@id/ll02"
-        app:layout_constraintEnd_toStartOf="@id/ll03"
+    <ListView
+        android:id="@+id/lv_ListaCartas01"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:background="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll01" />
-=======
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll01"
-        app:layout_constraintVertical_bias="0.0" />
->>>>>>> d8314fe3361c167eeeeab19f7e2004bc0d6e89aa
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_ListaCartas02"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
