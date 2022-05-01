@@ -2,5 +2,6 @@
 <resources>
     <declare-styleable name="CartaView">
         <attr name="PaloCarta" format="integer"/>
+        <attr name="NumeroCarta" format="integer"/>
     </declare-styleable>
 </resources>
