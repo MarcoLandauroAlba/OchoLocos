@@ -15,7 +15,7 @@ class CartaView : View{
     private var mSize : Float = 0f
     private var mWidth : Float = 0f
     private var mHeight : Float = 0f
-    private var paloCarta : Int = 0
+    var paloCarta : Int = 0
 
     constructor(context: Context, attrs : AttributeSet): super(context, attrs){
         val a : TypedArray = context.theme.obtainStyledAttributes(

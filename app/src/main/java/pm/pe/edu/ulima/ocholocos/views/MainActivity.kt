@@ -98,6 +98,7 @@ class MainActivity : AppCompatActivity() {
         // ADAPTADOR DE CARTAS LISTAS 01
         val adapterCartasLista01 = CartaAdapter(this, listaCartitas)
 
+        val lv_ListaCartas01 = findViewById<ListView>(R.id.lv_ListaCartas01)
         lv_ListaCartas01.adapter = adapterCartasLista01
 
         lv_ListaCartas01.setOnItemClickListener{ parent, view, position, id ->
@@ -114,6 +115,7 @@ class MainActivity : AppCompatActivity() {
         // ADAPTADOR DE CARTAS LISTAS 02
         val adapterCartasLista02 = CartaAdapter(this, listaCartitas)
 
+        val lv_ListaCartas02 = findViewById<ListView>(R.id.lv_ListaCartas02)
         lv_ListaCartas02.adapter = adapterCartasLista02
 
         lv_ListaCartas02.setOnItemClickListener{ parent, view, position, id ->

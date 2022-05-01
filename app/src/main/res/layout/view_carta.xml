@@ -4,30 +4,13 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/ib_imagenFuncional"
-        android:layout_width="60dp"
+    <pm.pe.edu.ulima.ocholocos.customViews.CartaView
+        android:id="@+id/cv_cartita"
+        android:layout_width="35dp"
         android:layout_height="50dp"
-        android:background="@color/black"
-        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
-    <TextView
-        android:id="@+id/numero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hola a todos"
-        app:layout_constraintTop_toBottomOf="@id/ib_imagenFuncional"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-    <TextView
-        android:id="@+id/palo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aqui va el palo"
-        app:layout_constraintTop_toBottomOf="@id/numero"
-        app:layout_constraintStart_toStartOf="parent"
+        app:PaloCarta="1"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
