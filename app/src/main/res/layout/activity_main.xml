@@ -8,7 +8,7 @@
     tools:context=".views.MainActivity">
 
 
-<!--    JUGADOR 01-->
+    <!--    JUGADOR 01-->
     <LinearLayout
         android:id="@+id/ll01"
         android:layout_width="match_parent"
@@ -50,49 +50,20 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintTop_toBottomOf="@id/ll01"
-        app:layout_constraintBottom_toTopOf="@id/ll02"
-        >
-        <ImageView
-            android:src="@drawable/square_white_svg"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-        <ScrollView
-            android:id="@+id/svP03"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="@color/purple_200"
-            android:orientation="vertical"
-            android:layout_weight="6"
-            >
-            <ListView
-                android:id="@+id/lvP03"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </ScrollView>
-        <ImageView
-            android:src="@drawable/square_white_svg"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
-    <pm.pe.edu.ulima.ocholocos.customViews.CartaView
-        android:layout_width="134dp"
-        android:layout_height="255dp"
-        android:layout_margin="10dp"
-        app:PaloCarta="1"
-        app:layout_constraintBottom_toTopOf="@id/ll02"
-        app:layout_constraintEnd_toStartOf="@id/ll03"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll01" />
-=======
-        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll01"
         app:layout_constraintVertical_bias="0.0" />
->>>>>>> d8314fe3361c167eeeeab19f7e2004bc0d6e89aa
+
+    <pm.pe.edu.ulima.ocholocos.customViews.CartaView
+        android:layout_width="152dp"
+        android:layout_height="227dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        app:PaloCarta="4"
+        app:NumeroCarta="13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll01" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,10 +12,11 @@ class CartaView : View{
     private val mPaint : Paint = Paint()
     private val mPaintN : Paint = Paint()
     private val mPaintR : Paint = Paint()
-    private var mSize : Float = 0f
+    private val mPaintNumero : Paint = Paint()
     private var mWidth : Float = 0f
     private var mHeight : Float = 0f
-    private var paloCarta : Int = 0
+    var paloCarta : Int = 0
+    var NumeroCarta : Int = 0
 
     constructor(context: Context, attrs : AttributeSet): super(context, attrs){
         val a : TypedArray = context.theme.obtainStyledAttributes(
@@ -25,6 +26,7 @@ class CartaView : View{
             0
         )
         paloCarta = a.getInt(R.styleable.CartaView_PaloCarta, 4)
+        NumeroCarta = a.getInt(R.styleable.CartaView_NumeroCarta, 1)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -38,6 +40,7 @@ class CartaView : View{
         super.onDraw(canvas)
         canvas!!.drawColor(Color.WHITE)
         drawCarta(canvas!!)
+        drawNumero(canvas!!, NumeroCarta, paloCarta)
         drawPalo(canvas!!, paloCarta)
 
     }
@@ -63,6 +66,55 @@ class CartaView : View{
             canvas!!.drawText("♧",mWidth / 2f -  mWidth / 3.3f, mHeight / 2f +  mHeight / 6.8f, mPaintN)
         }else if(palo == 4){
             canvas!!.drawText("♤",mWidth / 2f -  mWidth / 4f, mHeight / 2f +  mHeight / 6.3f, mPaintN)
+        }
+    }
+    private fun drawNumero(canvas : Canvas, numero : Int, palo : Int){
+        if(palo == 1 || palo == 2){
+            mPaintNumero.color = Color.RED
+        }else{
+            mPaintNumero.color = Color.BLACK
+        }
+        mPaintNumero.style = Paint.Style.FILL_AND_STROKE
+        mPaintNumero.textSize = mWidth / 3f
+        if(numero == 1){
+            canvas.drawText("A",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("A",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 2){
+            canvas.drawText("2",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("2",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 3){
+            canvas.drawText("3",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("3",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 4){
+            canvas.drawText("4",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("4",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 5){
+            canvas.drawText("5",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("5",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 6){
+            canvas.drawText("6",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("6",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 7){
+            canvas.drawText("7",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("7",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 8){
+            canvas.drawText("8",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("8",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 9){
+            canvas.drawText("9",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("9",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 10){
+            canvas.drawText("X",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("X",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 11){
+            canvas.drawText("J",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("J",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 12){
+            canvas.drawText("Q",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("Q",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
+        }else if(numero == 13){
+            canvas.drawText("K",mWidth / 4f - mWidth / 5f, mHeight / 10f + mHeight / 10f, mPaintNumero)
+            canvas.drawText("K",mWidth / 2f + mWidth / 4f, mHeight - mHeight / 25f, mPaintNumero)
         }
     }
 }
