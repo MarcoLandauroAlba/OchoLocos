@@ -7,30 +7,61 @@
     android:layout_height="match_parent"
     tools:context=".views.MainActivity">
 
+
+<!--    JUGADOR 01-->
     <LinearLayout
+        android:id="@+id/ll01"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
             android:src="@drawable/square_white_svg"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:rotation="180"
             android:layout_weight="1"/>
-        <ScrollView
-            android:id="@+id/svP01"
+        <ListView
+            android:id="@+id/lvP01"
             android:layout_width="10dp"
-            android:layout_height="60dp"
-            android:background="@color/purple_200"
+            android:layout_height="match_parent"
+            android:background="@color/purple_500"
             android:orientation="horizontal"
-            android:rotation="0"
+            android:layout_weight="6"
+            />
+        <ImageView
+            android:src="@drawable/square_white_svg"
+            android:layout_width="0dp"
+            android:rotation="180"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+<!--JUGADOR 02-->
+    <LinearLayout
+        android:id="@+id/ll02"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <ImageView
+            android:src="@drawable/square_white_svg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/svP02"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_200"
             android:layout_weight="6"
             >
             <ListView
-                android:id="@+id/lvP01"
+                android:id="@+id/lvP02"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
         <ImageView
             android:src="@drawable/square_white_svg"
             android:layout_width="0dp"
@@ -38,62 +69,49 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
-
+    <!--JUGADOR 03-->
+    <LinearLayout
+        android:id="@+id/ll03"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll01"
+        app:layout_constraintBottom_toTopOf="@id/ll02"
+        >
+        <ImageView
+            android:src="@drawable/square_white_svg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ScrollView
+            android:id="@+id/svP03"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/purple_200"
+            android:orientation="vertical"
+            android:layout_weight="6"
+            >
+            <ListView
+                android:id="@+id/lvP03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </ScrollView>
+        <ImageView
+            android:src="@drawable/square_white_svg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
     <pm.pe.edu.ulima.ocholocos.customViews.CartaView
-        android:layout_width="35dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ll02"
+        app:layout_constraintEnd_toStartOf="@id/ll03"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <ScrollView
-        android:id="@+id/svP02"
-        android:layout_width="10dp"
-        android:layout_height="60dp"
-        android:background="@color/purple_200"
-        android:orientation="horizontal"
-        android:rotation="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
-
-        <ListView
-            android:id="@+id/lvP02"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/svP03"
-        android:layout_width="10dp"
-        android:layout_height="60dp"
-        android:background="@color/purple_200"
-        android:orientation="horizontal"
-        android:rotation="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <ListView
-            android:id="@+id/lvP03"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </ScrollView>
-
-    <TextView
-        android:id="@+id/textito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        tools:text="asdfasdf" />
-
+        app:layout_constraintTop_toBottomOf="@id/ll01"
+        android:layout_margin="10dp"
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

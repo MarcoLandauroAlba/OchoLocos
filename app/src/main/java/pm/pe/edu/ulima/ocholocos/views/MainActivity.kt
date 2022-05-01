@@ -7,7 +7,6 @@ import android.widget.ScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import pm.pe.edu.ulima.ocholocos.R
-import pm.pe.edu.ulima.ocholocos.model.Juego
 
 
 class MainActivity : AppCompatActivity() {
@@ -45,18 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         val tvLetras = findViewById<TextView>(R.id.textito)
         tvLetras.text = dpWidth.toString()
-
-
     }
-    //Inicio del juego
-    //Se obtiene los tres nombres de los usuarios (por ahora jugador 1,2 y 3)
-    /*
-    var juego = Juego(Jugador 1,Jugador 2,Jugador 3)
-    //Turno
-    juego.turno
-    //Se reparten cartas
-    juego.repartirInicial()
-     */
-
 
 }
