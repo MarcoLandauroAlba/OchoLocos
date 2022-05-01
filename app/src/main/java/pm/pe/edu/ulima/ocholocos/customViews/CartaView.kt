@@ -22,6 +22,7 @@ class CartaView : View{
     }
     constructor(context: Context, attrs : AttributeSet): super(context, attrs){
         //Crear una instancia a partir de XML
+//        este es otro cambio
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
