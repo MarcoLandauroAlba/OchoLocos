@@ -49,6 +49,7 @@
         android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+<<<<<<< HEAD
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,5 +66,27 @@
         app:NumeroCarta="13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll01" />
+=======
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ListView
+        android:id="@+id/lv_ListaCartas01"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:background="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_ListaCartas02"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+>>>>>>> 87fa98f0e71a1d0d3cb05f3eb818232be0dd041d
 
 </androidx.constraintlayout.widget.ConstraintLayout>
