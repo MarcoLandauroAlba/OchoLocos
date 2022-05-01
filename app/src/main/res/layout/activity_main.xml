@@ -15,12 +15,14 @@
         android:layout_height="60dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
-        <ImageView
-            android:src="@drawable/square_white_svg"
+
+        <Button
+            android:id="@+id/pasar1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:rotation="180"
-            android:layout_weight="1"/>
+            android:src="@drawable/square_white_svg" />
         <ListView
             android:id="@+id/lvP01"
             android:layout_width="10dp"
@@ -29,53 +31,26 @@
             android:orientation="horizontal"
             android:layout_weight="6"
             />
-        <ImageView
-            android:src="@drawable/square_white_svg"
+
+        <Button
+            android:id="@+id/robarBut"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:rotation="180"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:src="@drawable/square_white_svg" />
     </LinearLayout>
 
-<!--JUGADOR 02-->
-    <LinearLayout
-        android:id="@+id/ll02"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
+    <TextView
+        android:id="@+id/turnoTemp"
+        android:layout_width="384dp"
+        android:layout_height="361dp"
+        android:layout_marginTop="172dp"
+        android:text="TextView"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        >
-        <ImageView
-            android:src="@drawable/square_white_svg"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/svP02"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:background="@color/purple_200"
-            android:layout_weight="6"
-            >
-            <ListView
-                android:id="@+id/lvP02"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </androidx.core.widget.NestedScrollView>
-        <ImageView
-            android:src="@drawable/square_white_svg"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
-    <!--JUGADOR 03-->
-    <LinearLayout
-        android:id="@+id/ll03"
-        android:layout_width="60dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@id/ll01"
         app:layout_constraintBottom_toTopOf="@id/ll02"
         >
@@ -113,5 +88,11 @@
         app:layout_constraintEnd_toStartOf="@id/ll03"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll01" />
+=======
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll01"
+        app:layout_constraintVertical_bias="0.0" />
+>>>>>>> d8314fe3361c167eeeeab19f7e2004bc0d6e89aa
 
 </androidx.constraintlayout.widget.ConstraintLayout>
