@@ -23,5 +23,6 @@ class MainActivity : AppCompatActivity() {
         lvP01.layoutParams.width = (2/3*min).toInt()
         val lvP02 : ListView = findViewById(R.id.lvP02)
         lvP02.layoutParams.width = (2/3*min).toInt()
+
     }
 }
