@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/Matias/Documents/2022-1/ProgramacionMovil/Evaluacion 1/OchoLocos/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+=======
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16886749267578127" />
+>>>>>>> ca0b7019a4e7cb8043c8aa2336bfa3b271010cb9
       </map>
     </option>
   </component>
@@ -17,7 +21,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.33" />
+        <option name="scale" value="0.16886749267578127" />
       </ProjectState>
     </option>
   </component>
