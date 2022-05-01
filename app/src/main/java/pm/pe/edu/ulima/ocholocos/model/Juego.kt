@@ -11,7 +11,6 @@ class Juego {
         this.jugadores.add(Player(nombre2,2))
         this.jugadores.add(Player(nombre3,3))
         this.turno = (1..3).random()
-        repartirInicial()
     }
 
     fun repartirInicial (){

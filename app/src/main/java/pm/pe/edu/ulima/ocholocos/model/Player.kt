@@ -9,6 +9,8 @@ class Player{
     constructor(nombre : String, id : Int){
         this.nombre = nombre
         this.id = id
+        var aux = Carta(1,12)
+        this.mano.add(aux)
     }
 
     fun Victoria(numCards : Int){
@@ -21,8 +23,13 @@ class Player{
         this.mano.add(carta)
     }
 
-    fun removeCardHand (carta:Carta){
+   /* fun removeCardHand (carta:Carta){
         this.mano.remove(carta)
+    }*/
+
+    fun removeCardHand (palo: Int, numero: Int){
+        var aux = Carta(palo,numero)
+        this.mano.remove(aux)
     }
 
     fun obtenerNumeroMano():Int{
