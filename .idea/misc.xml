@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/Matias/Documents/2022-1/ProgramacionMovil/Evaluacion 1/OchoLocos/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2485" />
         <entry key="..\:/Users/Matias/Documents/2022-1/ProgramacionMovil/Evaluacion 1/OchoLocos/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2485" />
         <entry key="..\:/Users/Matias/Documents/2022-1/ProgramacionMovil/Evaluacion 1/OchoLocos/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16886749267578127" />
+=======
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25592956542968753" />
+>>>>>>> a9db7d24aaa1da5e0909a47538656972b5640aa8
       </map>
     </option>
   </component>
