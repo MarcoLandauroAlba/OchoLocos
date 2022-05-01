@@ -3,8 +3,8 @@ package pm.pe.edu.ulima.ocholocos.model
 import kotlin.random.Random
 
 class Mesa {
-    private var mazo : MutableList<Carta> = mutableListOf()
-    private var cartaMedio : Carta? = null
+    var mazo : MutableList<Carta> = mutableListOf()
+    var cartaMedio : Carta? = null
     private var cementerio : MutableList<Carta> = mutableListOf()
 
     constructor(){
@@ -22,5 +22,26 @@ class Mesa {
             }
         }
         return cartasAux
+    }
+
+    fun robarCarta():Carta{
+        if(this.mazo.count()==0){
+            reshuffleMazo()
+        }
+        return this.mazo.removeFirst()
+    }
+
+    fun newCartaMedio(carta:Carta){
+        this.cartaMedio = carta
+    }
+
+    fun addCementerio(carta:Carta){
+        this.cementerio.add(carta)
+    }
+
+    fun reshuffleMazo(){
+        this.mazo = this.cementerio
+        this.cementerio.clear()
+        this.mazo.shuffle(Random(666))
     }
 }
