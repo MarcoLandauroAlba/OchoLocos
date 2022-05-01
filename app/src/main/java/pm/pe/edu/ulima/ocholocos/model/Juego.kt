@@ -3,14 +3,15 @@ package pm.pe.edu.ulima.ocholocos.model
 class Juego {
     var mesa : Mesa = Mesa()
     var jugadores : MutableList<Player> = mutableListOf()
-    private var acumulado : Int = 0
+    var acumulado : Int = 0
     var turno : Int = 0
 
-    constructor(nombre1 : String, nombre2 : String,nombre3 : String){
+    constructor(nombre1 : String="Jugador 1", nombre2 : String="Jugador 2",nombre3 : String="Jugador 3"){
         this.jugadores.add(Player(nombre1,1))
         this.jugadores.add(Player(nombre2,2))
         this.jugadores.add(Player(nombre3,3))
         this.turno = (1..3).random()
+        repartirInicial()
     }
 
     fun repartirInicial (){
@@ -23,14 +24,15 @@ class Juego {
     }
 
     fun sigTurno (j : Boolean = false){
-        if (this.turno == 3){
-            this.turno == 1
+        this.turno +=1
+        if (this.turno == 4){
+            this.turno = 1
         }
         if(j){
             this.turno +=1
         }
-        if (this.turno == 3) {
-            this.turno == 1
+        if (this.turno == 4) {
+            this.turno = 1
         }
     }
 

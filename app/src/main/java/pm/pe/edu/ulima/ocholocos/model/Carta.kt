@@ -1,8 +1,8 @@
 package pm.pe.edu.ulima.ocholocos.model
 
 class Carta {
-    private val palo : Int
-    private val num : Int
+    val palo : Int
+    val num : Int
 
     constructor(palo: Int,numero : Int){
         this.palo = palo

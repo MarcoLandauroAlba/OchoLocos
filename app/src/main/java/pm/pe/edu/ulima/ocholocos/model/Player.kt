@@ -1,5 +1,8 @@
 package pm.pe.edu.ulima.ocholocos.model
 
+import android.os.Build
+import androidx.annotation.RequiresApi
+
 class Player{
     var id : Int
     var nombre : String
@@ -9,8 +12,6 @@ class Player{
     constructor(nombre : String, id : Int){
         this.nombre = nombre
         this.id = id
-        var aux = Carta(1,12)
-        this.mano.add(aux)
     }
 
     fun Victoria(numCards : Int){
@@ -23,16 +24,18 @@ class Player{
         this.mano.add(carta)
     }
 
-   /* fun removeCardHand (carta:Carta){
-        this.mano.remove(carta)
-    }*/
-
-    fun removeCardHand (palo: Int, numero: Int){
+    /*@RequiresApi(Build.VERSION_CODES.N)
+    fun removeCardHand (palo: Int, numero: Int):Carta{
         var aux = Carta(palo,numero)
-        this.mano.remove(aux)
-    }
+        this.mano.removeIf { carta:Carta -> carta.num ==numero && carta.palo == palo }
+        return aux
+    }*/
 
     fun obtenerNumeroMano():Int{
         return this.mano.count()
+    }
+
+    fun vermano(){
+        this.mano.forEach{carta -> println(carta.toString()) }
     }
 }

@@ -1,49 +1,72 @@
 package pm.pe.edu.ulima.ocholocos.views
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.DisplayMetrics
-import android.widget.ListView
-import android.widget.ScrollView
-import android.widget.TextView
+import android.util.Log
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import pm.pe.edu.ulima.ocholocos.R
+import pm.pe.edu.ulima.ocholocos.model.Carta
+import pm.pe.edu.ulima.ocholocos.model.Juego
 
 
 class MainActivity : AppCompatActivity() {
+
+    private var mBotonPasarJugador1 : Button? = null
+    private lateinit var mJuego : Juego
+    private var mtextoTemp : TextView? = null
+    private var mLanzaronJ : Boolean = false
+    private var cartaAux : Carta? = null
+    private var mBotonRobar1 : Button? = null
+    private var mPuedeRobar : Boolean = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        mJuego = Juego()
+        mBotonPasarJugador1 = findViewById(R.id.pasar1)
+        mBotonRobar1 = findViewById(R.id.robarBut)
 
-//        val displayMetrics: DisplayMetrics = this.resources.displayMetrics\
+        mtextoTemp = findViewById(R.id.turnoTemp)
+        mtextoTemp!!.text = "Turno :"+mJuego.turno.toString()+"\nMano:" + mJuego.jugadores[mJuego.turno-1].obtenerNumeroMano().toString()+"\nCarta de medio: "+mJuego.mesa.cartaMedio.toString()+"\nMazo: "+mJuego.mesa.mazo.count()
+
+        mBotonPasarJugador1!!.setOnClickListener{
+            if(mJuego.turno!=1){
+                Log.i("dad","No es su turno")
+            }else{
+                mJuego.sigTurno(mLanzaronJ)
+                mtextoTemp!!.text = mJuego.turno.toString()
+                mPuedeRobar = true
+            }
+        }
+
+        mBotonRobar1!!.setOnClickListener{
+            if(mPuedeRobar){
+                robarCartas(mJuego.turno)
+                mtextoTemp!!.text = "Turno :"+mJuego.turno.toString()+"\nMano:" + mJuego.jugadores[mJuego.turno-1].obtenerNumeroMano().toString()+"\nCarta de medio: "+mJuego.mesa.cartaMedio.toString()+"\nMazo: "+mJuego.mesa.mazo.count()
+            }else{
+                Log.i("da","No puede robar")
+            }
+        }
 
 
-
-
-
-        val dpHeight = displayMetrics.heightPixels / displayMetrics.density
-        val dpWidth = displayMetrics.widthPixels / displayMetrics.density
-
-
-
-
-        val svP01 : ScrollView = findViewById(R.id.svP01)
-        svP01.layoutParams.width = dpWidth.toInt()
-        val svP02 : ScrollView = findViewById(R.id.svP02)
-        svP02.layoutParams.width = dpWidth.toInt()
-        val svP03 : ScrollView = findViewById(R.id.svP03)
-        svP03.layoutParams.width = dpWidth.toInt()
-
-
-        val lvP01 : ListView = findViewById(R.id.lvP01)
-
-        val lvP02 : ListView = findViewById(R.id.lvP02)
-
-        val lvP03 : ListView = findViewById(R.id.lvP03)
-
-
-        val tvLetras = findViewById<TextView>(R.id.textito)
-        tvLetras.text = dpWidth.toString()
+    }
+    fun robarCartas(jugador : Int,acumulado : Int = mJuego.acumulado){
+        if(mJuego.mesa.mazo.count()==0){
+            mJuego.mesa.reshuffleMazo()
+        }
+        if(acumulado == 0 ){
+            mJuego.jugadores[jugador-1].addCardHand(mJuego.mesa.robarCarta())
+            mPuedeRobar = false
+        }else{
+            for (x in 1..acumulado){
+                mJuego.jugadores[jugador-1].addCardHand(mJuego.mesa.robarCarta())
+            }
+            mPuedeRobar = false
+        }
     }
 
 }
