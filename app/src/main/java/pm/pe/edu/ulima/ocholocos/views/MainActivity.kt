@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         val tvLetras = findViewById<TextView>(R.id.textito)
         tvLetras.text = dpWidth.toString()
-
     }
 
 }
